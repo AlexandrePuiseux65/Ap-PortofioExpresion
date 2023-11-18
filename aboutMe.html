@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Website Title -->
+    <title>Alexandre Puiseux - Portfolio</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Font-Awesome -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Lightbox -->
+	<link href="assets/lightbox/css/lightbox.css" rel="stylesheet">
+    <!-- Text Rotator-->
+	<link href="assets/textrotator/simpletextrotator.css" rel="stylesheet">
+	<!-- FlexSlider -->
+    <link href="assets/flexslider/flexslider.css" rel="stylesheet">
+	<!-- Theme Style -->
+    <link href="css/style.css" rel="stylesheet">
+	<!-- Animations -->
+    <link href="css/animate.css" rel="stylesheet">
+	<!-- Custom Favicon -->
+	<link href="img/APFavicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <!-- Map Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="assets/html5shiv/html5shiv.js"></script>
+    <script src="assets/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    	  	<!-- ==========================
+        HEADER SECTION 
+        =========================== -->
+        <header id="home">
+		    <!-- creative menu -->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="menu-wrap">
+				<nav class="menu">
+				    <!-- Menu Links -->
+					<div class="icon-list">
+						<a href="index.html#home"><i class="fa fa-fw fa-home"></i><span>Home</span></a>
+						<a href="aboutMe.html"><i class="fa fa-fw fa-quote-left"></i><span>About</span></a>
+						<a href="index.html#service"><i class="fa fa-fw fa-globe"></i><span>Service</span></a>
+						<a href="index.html#portfolio"><i class="fa fa-fw fa-picture-o"></i><span>Portfolio</span></a>
+						<a href="index.html#contact"><i class="fa fa-fw fa-envelope-o"></i><span>Contact</span></a>
+					</div>
+				</nav>
+			    </div>
+			    <button class="menu-button" id="open-button"></button><!-- menu button -->
+              </div><!--/row-->
+            </div><!--/container-->
+        </header>
+		<!-- ==========================
+        HEADER SECTION END  
+        =========================== -->
+        <!-- ==========================
+        ABOUT SECTION  
+        =========================== -->
+    <section class="intro text-center section-padding color-bg" id="about">
+        <div class="container">
+          <!-- WELCOME TEXT -->
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 wp1">
+              <h1 class="arrow">À <span>propos</span> de moi...</h1><!-- Headline -->
+              <!-- about / welcome text /// IL FAUT LE REFAIRE --> 
+              <p>En tant qu'étudiant en développement numérique à l'ECE, ma passion pour ce domaine m'a conduit à exercer en freelance, développant ainsi des compétences clés. Mon esprit critique me permet de remettre en question les solutions existantes et d'apporter des approches innovantes aux problèmes. Ma curiosité inépuisable me pousse à explorer de nouvelles technologies et à rester à jour avec les dernières tendances.</p>
+
+              <p>L'imagination est une composante essentielle de mon travail, me permettant de créer des solutions novatrices. Mon sens de l'organisation m'aide à gérer plusieurs projets simultanément tout en respectant les délais. La prise de conscience et la capacité à prendre du recul sont des compétences que je valorise, assurant que mes solutions restent alignées avec les objectifs du client.</p>
+              
+              <p>Enfin, mes compétences en communication, que ce soit à l'écrit, à l'oral ou visuellement, me permettent d'exprimer clairement mes idées et de soutenir mes projets avec des supports efficaces. En tant qu'étudiant passionné et freelance expérimenté, je suis prêt à relever les défis numériques avec succès.</p>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+ 		<!-- ==========================
+        CONTACT SECTION
+        =========================== -->
+        <section class="text-center section-padding contact-wrap" id="contact">
+          <!-- To Top Button -->
+              <a href="aboutMe.html#top" class="up-btn"><i class="fa fa-chevron-up"></i></a>
+              <div class="container">
+            <!-- Headline -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="arrow">Contactez <span>moi</span></h1>
+                  </div>
+                </div>
+                <div class="row contact-details">
+            <!-- GOOGLE MAPS DATA -->
+                <div id="map" style="height: 400px;"></div>
+    
+                <script type="text/javascript">
+                    var mymap = L.map('map').setView([48.8454304, 2.2618958], 15); // Paris
+                    // Creating a marker
+                    var marker = L.marker([48.8454304, 2.2618958]);
+                    // Adding marker to the map
+                    marker.addTo(mymap);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(mymap);
+                </script>
+            <!-- Adress Box -->
+                  <div class="col-md-4">
+                    <div class="dark-box box-hover">
+                      <h2><i class="fa fa-map-marker"></i><span>Address</span></h2>
+                      <p>36 rue Michel Ange, Paris 16, France </p>
+                    </div>
+                  </div>
+            <!-- Phone Number Box -->
+                  <div class="col-md-4">
+                    <div class="dark-box box-hover">
+                      <h2><i class="fa fa-mobile"></i><span>Phone</span></h2>
+                      <p>(+33) 07 78 17 53 10</p>
+                    </div>
+                  </div>
+            <!-- E-Mail Box -->
+                  <div class="col-md-4">
+                    <div class="dark-box box-hover">
+                      <h2><i class="fa fa-paper-plane"></i><span>Email</span></h2>
+                      <p><a href="index.html#">alexandrepsandbox@gmail.com</a></p>
+                    </div>
+                  </div>
+                </div>
+            <div class="row">
+              <!-- Contact Form -->
+              <div class="col-md-6 contact">
+                <form action="https://formsubmit.co/a.puiseux@yahoo.com" method="POST"->
+                  <!-- Thank you page -->
+                  <!-- Nom -->
+                  <input type="text" id="name" class="form-control" placeholder="Votre nom" required>
+                  <!-- Email -->
+                  <input type="email" id="email" class="form-control" placeholder="Adresse Email" required>
+                  <!-- Message Area -->
+                  <textarea type="text" id="message" class="form-control" placeholder="Écrivez votre message ici..." style="height:232px;"></textarea>
+                  <!-- Subtmit Button -->
+                  <button type="submit" class="btn btn-send">Envoyer</button>
+                </form>
+              </div>
+            </div>
+          <br>
+          <!-- Social Buttons - use font-awesome, past in what you want -->
+                <div class="row">
+                  <div class="col-md-12">
+                    <ul class="social-buttons">
+                      <li><a href="index.html#" class="social-btn"><i class="fa fa-dribbble"></i></a></li><!-- dribble -->
+                      <li><a href="index.html#" class="social-btn"><i class="fa fa-twitter"></i></a></li><!-- twitter -->
+                      <li><a href="index.html#" class="social-btn"><i class="fa fa-facebook"></i></a></li><!-- facebook -->
+              <li><a href="index.html#" class="social-btn"><i class="fa fa-deviantart"></i></a></li><!-- deviantart -->
+              <li><a href="index.html#" class="social-btn"><i class="fa fa-youtube"></i></a></li><!-- youtube -->
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+        <!-- ==========================
+            CONTACT SECTION END
+            =========================== -->
+        
+        
+        
+        <!-- ==========================
+            FOOTER SECTION
+            =========================== -->
+            <footer>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <p>All Rights Reserved. &copy; 2023 <a href="https://youtu.be/dQw4w9WgXcQ?si=FPw06fR6NIt1Yv-0">Just for you</a>
+                  </div>
+                </div>
+              </div>
+            </footer>
+       <!--==========================
+            FOOTER SECTION END
+            =========================== -->		
+          
+          
+      <!-- jQuery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <!-- SmoothScroll -->           
+      <script type="text/javascript" src="assets/smoothscroll/smoothscroll.js"></script>
+      <!-- Bootstrap -->
+      <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <!-- Waypoints -->
+      <script src="js/waypoints.min.js"></script>
+      <!-- classie.js -->
+      <script src="js/classie.js"></script>
+      <!-- FlexSlider -->
+      <script src="assets/flexslider/jquery.flexslider.js"></script>
+      <!-- Modernizr -->
+      <script src="js/modernizr.js"></script>
+      <!-- Text Rotator -->
+      <script src="assets/textrotator/jquery.simple-text-rotator.js"></script>
+      <!-- Lightbox.js -->
+      <script src="assets/lightbox/js/lightbox.min.js"></script>
+      <!-- Google Maps --> 
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDeKBBPJTG3v5w3cNPAgM6ZsJiPyL1mP_o&amp;sensor=false"></script>
+      <!-- Theme JavaScript Core -->
+      <script src="js/main.js"></script>
+      <script src="js/script.js"></script>
+      
+      <!-- TEXT ROTATOR SETTINGS -->
+      <script type="text/javascript">
+      $(".rotate").textrotator({
+        animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
+        separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
+        speed: 2000 // How many milliseconds until the next word show.
+      });
+      </script>
+      
+      </body>
+</body>
+</html>
+
+        
